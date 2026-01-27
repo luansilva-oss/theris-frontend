@@ -1,14 +1,13 @@
 {
-  "name": "theris-backend",
+  "name": "theris-frontend",
   "version": "1.0.0",
-  "description": "Backend do Sistema Theris - Grupo 3C",
+  "description": "Frontend do Sistema Theris - Grupo 3C",
   "main": "dist/index.js",
   "scripts": {
     "dev": "nodemon --exec ts-node src/index.ts",
     "build": "tsc",
     "start": "node dist/index.js",
-    "seed": "ts-node prisma/seed.ts",
-    "postinstall": "prisma generate"
+    "seed": "ts-node prisma/seed.ts"
   },
   "keywords": [],
   "author": "Luan Silva",
