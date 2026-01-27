@@ -1,14 +1,25 @@
 {
   "compilerOptions": {
-    "target": "es2016",            /* Versão do JavaScript gerado */
-    "module": "commonjs",          /* Padrão de módulos do Node.js */
-    "rootDir": "./src",            /* Onde está seu código TypeScript */
-    "outDir": "./dist",            /* Onde o código compilado será salvo */
-    "strict": true,                /* Ativa verificações rigorosas (segurança) */
-    "esModuleInterop": true,       /* Permite importar módulos CommonJS */
-    "skipLibCheck": true,          /* Acelera a compilação */
-    "forceConsistentCasingInFileNames": true
+    "target": "ES2020",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules", "**/*.spec.ts"]
+  "include": ["src"],
+  "references": [{ "path": "./tsconfig.node.json" }]
 }

@@ -1,29 +1,31 @@
 {
   "name": "theris-frontend",
-  "version": "1.0.0",
-  "description": "Frontend do Sistema Theris - Grupo 3C",
-  "main": "dist/index.js",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
   "scripts": {
-    "dev": "nodemon --exec ts-node src/index.ts",
-    "build": "tsc",
-    "start": "node dist/index.js",
-    "seed": "ts-node prisma/seed.ts"
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
   },
-  "keywords": [],
-  "author": "Luan Silva",
-  "license": "ISC",
   "dependencies": {
-    "@prisma/client": "^5.10.0",
-    "cors": "^2.8.5",
-    "dotenv": "^16.4.1",
-    "express": "^4.18.2",
-    "google-auth-library": "^9.6.3",
-    "@types/cors": "^2.8.17",
-    "@types/express": "^4.17.21",
-    "@types/node": "^20.11.16",
-    "nodemon": "^3.0.3",
-    "prisma": "^5.10.0",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.3.3"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "lucide-react": "^0.344.0",
+    "react-router-dom": "^6.22.3",
+    "axios": "^1.6.8",
+    "@react-oauth/google": "^0.12.1",
+    "jwt-decode": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitejs/plugin-react": "^4.3.1",
+    "typescript": "^5.2.2",
+    "vite": "^5.3.1",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4"
   }
 }
